@@ -1,0 +1,342 @@
+        .mb-1 {
+            margin-bottom: 8px;
+        }
+        .mb-2 {
+            margin-bottom: 16px;
+        }
+        .mb-4 {
+            margin-bottom: 40px;
+        }
+        .mb-6 {
+            margin-bottom: 60px;
+        }
+        .mt-6 {
+            margin-top: 60px;
+        }
+        .ctnt {
+            text-align: left;
+            margin: 0 auto;
+        }
+        %btn {
+            border-radius: 30px;
+            padding: 10px;
+        }
+        .full {
+            width: 100%;
+        }
+        .container {
+            width: 1110px;
+            margin: 0 auto;
+        }
+        .header, .footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 9px 0;
+        }
+        .head-item, .foot-item {
+            display: flex;
+            justify-content: flex-end;
+            img {
+                height: 38px;
+            }
+        }
+        .nav {
+            margin-left: 32px;
+            font-size: $fz-5;
+            font-family: $en;
+            font-weight: 400;
+            color: $dark-grey;
+            a {
+                text-decoration: none;
+                color: $dark-grey;
+                line-height: 44px;
+                &:hover {
+                    color: lighten($dark-grey, 20%);
+                }
+            }
+        }
+        // 首圖區
+        .banner {
+            height: 100vh;
+            background: center url(https://github.com/hexschool/webLayoutTraining1st/blob/master/perfume-week6/index1.jpg?raw=true);
+            background-size: cover;
+        }
+        .banner-text {
+            height: 870px;
+            // flex垂直置中
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .ctnt {
+                width: 445px;
+                margin-right: 0;
+                color: #fff;
+                font-family: $en;
+                span {
+                    font-size: $fz-10;
+                    font-weight: 900;
+                    line-height: 60px;
+                    letter-spacing: 1.2px;
+                }
+                p {
+                    font-size: $fz-6;
+                    font-weight: 300;
+                    line-height: 36px;
+                }
+            }
+        }
+        .btn-banner {
+            @extend %btn;
+            width: 350px;
+            margin: 0 auto;
+            border: 2px #fff solid;
+            text-align: center;
+            &:hover {
+                cursor: pointer;
+                background-color: rgba(255, 255, 255, 0.3);
+            }
+            a {
+                color: #fff;
+                font-size: 30px;
+                font-family: $en;
+                font-weight: 500;
+                text-decoration: none;
+            }
+        }
+        // 卡片區
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .card {
+            width: 48%;
+            height: 555px;
+            // flex垂直置中
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            // 背景圖片
+            background-repeat: no-repeat;
+            background-size: cover;
+            .ctnt {
+                width: 350px;
+                span {
+                    font-size: $fz-8;
+                    font-family: $en;
+                    font-weight: 900;
+                    letter-spacing: 1.2px;
+                    line-height: 48px;
+                }
+                p {
+                    font-size: $fz-5;
+                    font-family: $ch;
+                    font-weight: 300;
+                    line-height: 30px;
+                    margin: 20px 0;
+                }
+            }
+        }
+        .more {
+            font-size: $fz-4;
+            font-family: $ch;
+            font-weight: 500;
+            color: $light-brown;
+            text-decoration: none;
+            &:hover {
+                color: lighten($light-brown, 20%);
+            }
+        }
+        .long {
+            height: 1080px;
+            background-position: -100px;
+            overflow: hidden;
+            .ctnt {
+                margin-bottom: 52px;
+                font-family: $en;
+                span {
+                    font-size: $fz-6;
+                    font-weight: 600;
+                    letter-spacing: 1.2px;
+                    line-height: 36px;
+                }
+                p {
+                    font-size: $fz-4;
+                    font-weight: 300;
+                    line-height: 24px;
+                }
+            }
+        }
+        .btn-card {
+            @extend %btn;
+            width: 350px;
+            margin: 0 auto;
+            border: 2px #000 solid;
+            text-align: center;
+            &:hover {
+                cursor: pointer;
+                background-color: rgba(200, 200, 200, 0.2);
+            }
+            a {
+                color: #000;
+                font-size: $fz-5;
+                font-family: $en;
+                font-weight: 400;
+                text-decoration: none;
+            }
+
+        }
+        // 產品區
+        .grey {
+            background: $light-grey;
+            padding: 40px 0;
+        }
+        .product {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .prod {
+            width: 350px;
+            height: 540px;
+            // 背景圖片
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .soldout {
+            background-color: rgba(0, 0, 0, .3);
+            background-blend-mode: multiply;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .sold {
+            text-align: center;
+            color: #fff;
+            font-size: $fz-6;
+            font-family: $en;
+            font-weight: 900;
+            letter-spacing: 1.2;
+            line-height: 36px;
+        }
+        .prod-info {
+            width: 350px;
+            .title {
+                font-size: $fz-6;
+                font-family: $en;
+                font-weight: 700;
+                line-height: 36px;
+                letter-spacing: 1.2;
+            }
+            .text {
+                font-size: $fz-4;
+                font-family: $en;
+                font-weight: 300;
+                line-height: 24px;
+                span {
+                    margin-left: 8px;
+                    text-decoration: line-through;
+                    color: $dark-grey;
+                }
+            }
+        }
+        // 文章區
+        .feature {
+            display: flex;
+            justify-content: space-between;
+            .pic {
+                width: 730px;
+                background-size: cover;
+            }
+            .ctnt {
+                width: 350px;
+                font-family: $en;
+                .title {
+                    font-size: $fz-8;
+                    line-height: 48px;
+                    font-weight: 900;
+                }
+                .sub {
+                    font-size: $fz-5;
+                    line-height: 30px;
+                    font-weight: 300;
+                }
+                .text {
+                    font-size: $fz-4;
+                    line-height: 24px;
+                    font-weight: 300;
+                }
+            }
+        }
+        //訂閱區
+        .btm-img {
+            height: 70vh;
+            background: center url(https://github.com/hexschool/webLayoutTraining1st/blob/master/perfume-week6/index10.jpg?raw=true);
+            background-size: cover;
+        }
+        .subscribe {
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            .subs {
+                width: 350px;
+                span {
+                    font-size: $fz-8;
+                    line-height: 48px;
+                    font-family: $ch;
+                    font-weight: 700;
+                    color: $dark-grey;
+                }
+                input {
+                    font-size: $fz-4;
+                    line-height: 24px;
+                    font-family: $en;
+                    border: 2px $dark-brown solid;
+                    margin-bottom: 112px;
+                }
+                input[type=text] {
+                    color: $dark-grey;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    padding-left: 16px;
+                    &:focus {
+                        outline: none;
+                        border: 2px $dark-brown solid;
+                    }
+                }
+                input[type=button] {
+                    color: #fff;
+                    background: $dark-brown;
+                    padding: 20px 26px;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .brown {
+            background: $dark-brown;
+            p {
+                font-size: 14px;
+                line-height: 44px;
+                font-family: $en;
+                font-weight: 400;
+                color: #fff;
+                margin-left: 20px;
+            }
+        }
+        .foot {
+            margin-left: 32px;
+            font-size: $fz-5;
+            font-family: $en;
+            font-weight: 400;
+            color: #fff;
+            a {
+                text-decoration: none;
+                color: #fff;
+                line-height: 44px;
+                &:hover {
+                    color: lighten($dark-brown, 20%);
+                }
+            }
+        }
