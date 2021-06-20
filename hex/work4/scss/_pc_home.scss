@@ -28,32 +28,43 @@
             width: 1110px;
             margin: 0 auto;
         }
-        .header, .footer {
+        // header
+        .edge {
             display: flex;
             justify-content: space-between;
             padding: 9px 0;
         }
-        .head-item, .foot-item {
+        .edge-item {
             display: flex;
             justify-content: flex-end;
             img {
                 height: 38px;
             }
         }
-        .nav {
+        .edge-menu {
             margin-left: 32px;
             font-size: $fz-5;
             font-family: $en;
             font-weight: 400;
-            color: $dark-grey;
             a {
                 text-decoration: none;
-                color: $dark-grey;
                 line-height: 44px;
+            }
+        }
+        .nav {
+            color: $dark-grey;
+            a {
+                color: $dark-grey;
                 &:hover {
                     color: lighten($dark-grey, 20%);
                 }
             }
+        }
+        // flex垂直置中
+        .col-flex {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
         // 首圖區
         .banner {
@@ -63,10 +74,6 @@
         }
         .banner-text {
             height: 870px;
-            // flex垂直置中
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
             .ctnt {
                 width: 445px;
                 margin-right: 0;
@@ -111,10 +118,6 @@
         .card {
             width: 48%;
             height: 555px;
-            // flex垂直置中
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
             // 背景圖片
             background-repeat: no-repeat;
             background-size: cover;
@@ -205,9 +208,6 @@
         .soldout {
             background-color: rgba(0, 0, 0, .3);
             background-blend-mode: multiply;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
         }
         .sold {
             text-align: center;
@@ -327,15 +327,9 @@
             }
         }
         .foot {
-            margin-left: 32px;
-            font-size: $fz-5;
-            font-family: $en;
-            font-weight: 400;
             color: #fff;
             a {
-                text-decoration: none;
                 color: #fff;
-                line-height: 44px;
                 &:hover {
                     color: lighten($dark-brown, 20%);
                 }
