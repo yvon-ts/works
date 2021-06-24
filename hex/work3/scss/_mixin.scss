@@ -1,0 +1,11 @@
+        @mixin narrow {
+            @media(max-width: 1000px) {
+                @content
+            }
+        }
+
+        @mixin pad {
+            @media(max-width: 767px) {
+                @content
+            }
+        }
