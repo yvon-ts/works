@@ -1,0 +1,164 @@
+.mb-2{
+    margin-bottom: 20px;
+}
+.mb-6{
+    margin-bottom: 60px;
+}
+.container{
+    max-width: 940px;
+    margin: 0 auto;
+    //padding: 0 30px; //rwd
+}
+.header{
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; //垂直置中
+}
+.nav{
+    display: flex;
+    justify-content: flex-end;
+    font-weight: bold;
+    a{
+        display: block;
+        padding: 10px 30px 8px 30px;
+        &:hover{
+            background: $d-green;
+            color: $l-green;
+        }
+    }
+}
+.banner{
+    //mobile滿版所以不放在container內
+    max-width: 940px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    img{
+        display: block;
+    }
+    @include medium{
+        margin-bottom: 30px;
+    }
+    @include pad{
+        margin-bottom: 0;
+    }
+}
+.main{
+    display: flex;
+    justify-content: space-between;
+    @include medium{
+        flex-direction: column;
+        align-items: center;
+    }
+    @include pad{
+        flex-wrap: wrap;
+    }
+}
+.sidebar{
+    width: 300px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 40px;
+    text-align: center;
+    h2{
+        background: $d-green;
+        color: $l-green;
+        padding: 16px 0;
+    }
+    li{
+        border: 1px solid $l-green;
+        padding: 16px 0;
+        //消除重疊border
+        margin-bottom: -1px;
+        &:hover{
+            background: $l-green;
+        }
+        a{
+            display: block;
+        }
+    }
+    @include medium{
+        margin-bottom: 30px;
+    }
+    @include pad{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+.cards{
+    width: 620px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include pad{
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+    }
+}
+.card{
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+    .tag{
+        position: absolute;
+        top: 0;
+        left: 10px;
+        writing-mode: vertical-lr;
+        letter-spacing: 5px;
+        background: $d-green;
+        color: $l-green;
+        padding: 10px;
+    }
+    .heart{
+        font-size: 20px;
+        position: absolute;
+        top: 16px;
+        right: 22px;
+    }
+    a{
+        display: block;
+        background: $l-green;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 65px;
+    }
+}
+.card-body{
+    text-align: center;
+    display: flex;
+    font-size: 20px;
+        line-height: 56px;
+        border-bottom: 1px solid $l-green;
+    .pname{
+        width: 57%;
+        font-weight: 300;
+        border-left: 1px solid $l-green;
+        border-right: 1px solid $l-green;
+    }
+    .price{
+        width: 43%;
+        font-weight: 500;
+        border-right: 1px solid $l-green;
+    }
+}
+.pagination{
+    ul{
+        display: flex;
+        justify-content: flex-end;
+        text-align: center;
+    }
+    li{
+        width: 60px;
+        line-height: 60px;
+        border: 1px solid $l-green;
+        margin-right: -1px;
+    }
+    a{
+        display: block;
+        &:hover{
+            background: $d-green;
+            color: $l-green;
+        }
+    }
+}
